@@ -14,14 +14,14 @@ st.set_page_config(
 # @st.cache_resource
 def load_model_and_data():
     # Load the trained model and vectorizer
-    with open('model\model.pkl', 'rb') as f:
+    with open('model/model.pkl', 'rb') as f:
         model = pickle.load(f)  
    
     with open('model/vectorizer.pkl', 'rb') as f:
         vectorizer = pickle.load(f)
    
     # Load the intents data
-    with open('dataset\intents.json', 'r') as f:
+    with open('dataset/intents.json', 'r') as f:
         intents = json.load(f)
    
     return model, vectorizer, intents
